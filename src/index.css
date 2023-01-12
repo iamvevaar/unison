@@ -1,0 +1,195 @@
+*{
+  text-decoration: none;
+  color: black;  
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+}
+p{
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* css for nav bar starts here */
+.nav{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.nav > .logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav > .logo > .text{
+  font-size: larger;
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 900;
+  margin-left: 5px;
+}
+
+
+.nav > button {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 2px 40px 2px 40px;
+  margin-right: 20px;
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.nav > button:hover{
+  background-color: #c9e265;
+  transition: 0.5s;
+  cursor: pointer;
+}
+/* css for nav bar ends here */
+
+
+/* css for main starts here */
+.main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 90px;
+  height: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+
+.main > .readMore{
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 2px 40px 2px 40px;
+  margin-top: 25px;
+  background-color: transparent;
+  font-family: 'Inter', sans-serif;
+  transition: 0.5s;
+}
+
+
+.main > button {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 2px 40px 2px 40px;
+  margin-top: 25px;
+  background-color: transparent;
+  transition: 0.5s;
+  font-family: 'Inter', sans-serif;
+}
+
+.main > button:hover{
+  cursor: pointer;
+}
+
+.animationContainer{
+  top: 400px;
+  position: absolute;  
+  z-index: -10;
+}
+
+#animator{
+  stroke-dasharray: 695;
+  stroke-dashoffset: 695;
+  animation: sign 4s ease;
+  animation-fill-mode:backwards;
+  animation-iteration-count: infinite;
+}
+/* animation for the drawer */
+@keyframes sign{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+/* css for main ends here */
+
+
+
+/* css for hero section */
+#hero{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.slider{
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.slider .slide-track{
+  animation: scroll 10s linear infinite;
+  display: flex;
+  gap: 45px;
+  width: calc(250px * 14);
+}
+
+.slider .slide{
+  height: 100px;
+  width: 250px;
+}
+
+/* animation for slider */
+@keyframes scroll {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(250px * 7));
+  }
+}
+
+.slider > .slide-track > .item{
+  height: 250px;
+  width: 250px;
+  background-color: #c9e265;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: bold;  
+}
+/* css for hero section */
+
+.contacts{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts >  .discordContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #7289da;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
